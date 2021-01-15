@@ -4,13 +4,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true
     unset($_SESSION['login']);
     unset($_SESSION['senha']);
     unset($_SESSION['falha']);
-    echo "Usuário e senha não encontrados!";
-}
-
-//após cadastrar um usuário com sucesso
-if($_SESSION['hasCadastrado'] == true){
-    unset($_SESSION['hasCadastrado']);
-    echo "<script> alert('Sucesso');</script>";
+    echo "Usuário já existe ou dados invalidos";
 }
 ?>
 <html>
@@ -21,10 +15,7 @@ if($_SESSION['hasCadastrado'] == true){
     <input type="text" name="login" id="login"/><br/>
     <label>SENHA :</label>
     <input type="password" name="senha" id="senha"/><br/>
-    <input type="hidden" name="acao" value="logar">
-    <input type="submit" value="LOGAR  "/>
+    <input type="hidden" name="acao" value="cadastro">
+    <input type="submit" value="CADASTRAR"/>
 </form>
-<button>
-    <a href="cadastro.php" style="text-decoration:none">CADASTRO</a>
-</button>
 </html>
