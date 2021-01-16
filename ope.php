@@ -22,7 +22,6 @@ try {
                 header('location:site.php');
             } else {
                 unset($_SESSION['login']);
-                unset($_SESSION['senha']);
                 $_SESSION['falha'] = true;
                 header('location:index.php');
             }
