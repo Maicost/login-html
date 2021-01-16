@@ -47,7 +47,6 @@ try {
 
         default:
                 unset($_SESSION['login']);
-                unset($_SESSION['senha']);
                 unset($_SESSION['falha']);
                 header('location:index.php');
             break;
