@@ -1,8 +1,6 @@
 <?php
 session_start();
-if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true) and $_SESSION['falha'] == true) {
-    unset($_SESSION['login']);
-    unset($_SESSION['senha']);
+if ($_SESSION['falha'] == true) {
     unset($_SESSION['falha']);
     echo "Usuário já existe ou dados invalidos";
 }
