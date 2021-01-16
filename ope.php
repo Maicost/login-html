@@ -18,7 +18,6 @@ try {
             $result = $sth->fetch();
             if (password_verify($senha, $result[$collumnPass])) {
                 $_SESSION['login'] = $login;
-                $_SESSION['senha'] = $senha;
                 unset($_SESSION['falha']);
                 header('location:site.php');
             } else {
